@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(0,0,0);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/home" *ngIf="_auth.loggedIn()">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/add-category" *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'">Add category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/add-quiz" *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'">Add questions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/logout" *ngIf="_auth.loggedIn()" (click)="_auth.logoutUser()">Log out</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div>
+    <div *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'">
+        <h1>Administrator</h1>
+    </div>
+    <div>
+        <h2>Pick a category!</h2>
+    </div>
+
+    <div class="a-category-container">
+        <div *ngFor="let category of categories">
+            <div class="a-categories" onclick="openQuiz('0')">
+                <img src="{{category.imageName}}">
+                <h3>{{category.categoryName}}</h3>
+                <div>
+                    <button type="button" class="btn btn-outline-danger btn-lg margin-right" *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" [routerLink]="['/update-category', category._id]">Update</button>
+
+                    <button type=" button " class="btn btn-outline-danger btn-lg " *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" routerLink="/discuss">Delete</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

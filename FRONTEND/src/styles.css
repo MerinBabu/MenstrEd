@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+    background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm23-adj-12_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fef0d067ff99893b1a131e75e8814b4a);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+    max-height: 100%;
+    font-family: lato;
+    /* background: rgba(0, 0, 0); */
+    /* overflow: auto; */
+}
+
+html {
+    /* overflow: hidden; */
+    max-height: 100%;
+}
+
+#logoimage {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+#heading {
+    display: inline-block;
+    font-family: lato;
+    font-size: 50px;
+    color: #C3073F;
+}
+
+#genderneutral {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.click {
+    border: 1px solid #C3073F;
+    color: #C3073F;
+    padding: 10px;
+    font-weight: bold;
+    font-family: lato;
+    background: none;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+#text {
+    color: #C3073F;
+    font-size: 50px;
+    font-family: lato;
+}
+
+.click:hover {
+    background: #C3073F;
+    color: black;
+}
+
+.buttonplace {
+    margin-left: 50px;
+    flex: 1 10px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#chat {
+    border-radius: 50%;
+    border: 1px solid #C3073F;
+    color: #C3073F;
+    padding: 10px;
+    font-weight: bolder;
+    font-family: lato;
+    background: none;
+    margin-bottom: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 1200px;
+}
+
+#chat:hover {
+    background: #C3073F;
+    color: black;
+}
+
+#background {
+    width: 100%;
+    display: flex;
+}
+
+.bigimage {
+    flex: 1 10px;
+    text-align: center;
+}
+
+#bigimage {
+    width: 300px;
+    height: 300px;
+}
+
+#chatbot {
+    margin-left: 870px;
+    margin-bottom: 80px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+}

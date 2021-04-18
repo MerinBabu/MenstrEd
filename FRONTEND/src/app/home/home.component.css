@@ -1,0 +1,45 @@
+.navbar {
+    height: 75px;
+}
+
+a {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(171, 0, 0) !important;
+}
+
+.btn:hover {
+    color: black !important;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.flex-parent {
+    display: flex;
+    position: fixed;
+    left: 35%;
+    top: 50%;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+button.margin-right {
+    margin-right: 25px;
+}
+
+button {
+    padding: 14px 40px;
+    width: 225px;
+}
+
+h1 {
+    color: rgb(220, 53, 69);
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-top: 10%;
+}
