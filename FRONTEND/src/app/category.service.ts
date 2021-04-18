@@ -22,4 +22,8 @@ export class CategoryService {
     return this.http.post(`http://localhost:3000/updatecategory/${id}`, updatedCategory)
     .subscribe((data)=> {console.log(data)});
   }
+
+  deleteCategory(id){
+    return this.http.delete(`http://localhost:3000/deletecategory/${id}`);
+  }
 }

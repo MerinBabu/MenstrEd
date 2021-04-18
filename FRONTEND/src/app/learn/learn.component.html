@@ -41,7 +41,7 @@
                 <div>
                     <button type="button" class="btn btn-outline-danger btn-lg margin-right" *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" [routerLink]="['/update-category', category._id]">Update</button>
 
-                    <button type=" button " class="btn btn-outline-danger btn-lg " *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" routerLink="/discuss">Delete</button>
+                    <button type=" button " class="btn btn-outline-danger btn-lg " *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" (click)="deleteCategory(category._id)">Delete</button>
                 </div>
             </div>
 

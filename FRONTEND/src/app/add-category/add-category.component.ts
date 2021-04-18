@@ -4,7 +4,7 @@ import {FormGroup, FormControl, FormBuilder, Validators,Form} from '@angular/for
 import { Router } from '@angular/router';
 import { fromEventPattern } from 'rxjs';
 import { CategoryService } from '../category.service';
-// import {FileUploader} from 'ng2-file-upload/ng2-file-upload';
+
 
 
 @Component({
@@ -14,10 +14,7 @@ import { CategoryService } from '../category.service';
 })
 export class AddCategoryComponent implements OnInit {
 
-  // public uploader:FileUploader=new FileUploader({
-  //   url:"http://localhost:3000/addcategory",
-  //   itemAlias:'image'
-  // });
+  
 
   addCategoryForm:FormGroup=new FormGroup({
     categoryNo: new FormControl(''),
@@ -33,12 +30,7 @@ export class AddCategoryComponent implements OnInit {
   
   ngOnInit(): void {
 
-    // this.uploader.onAfterAddingFile=(file)=>{
-    //   file.withCredentials=false;
-    // };
-    // this.uploader.onCompleteItem=(item:any,status:any)=>{
-    //   console.log("Uploaded file details",item);
-    // }
+    
 
     this.addCategoryForm=this.fb.group(
       { categoryNo: ['',Validators.required],

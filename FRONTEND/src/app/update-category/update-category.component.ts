@@ -13,31 +13,21 @@ import { CategoryService } from '../category.service';
 export class UpdateCategoryComponent implements OnInit {
   updatedCategory: any = {};
 
-  // updateCategoryForm:FormGroup=new FormGroup({
-  //   categoryNo: new FormControl(''),
-  //   categoryName: new FormControl(''),
-  //   imageName: new FormControl(''),
-  // });
-   
-  // updatedCategory = {categoryNo:'',categoryName:'',imageName:''};
+  
 
   constructor(private fb:FormBuilder,public _auth:AuthService,private route: ActivatedRoute, private _router:Router, private categoryService:CategoryService) { }
 
   updateCategory(categoryNo, categoryName, imageName){
     this.route.params.subscribe(params =>{
       this.categoryService.updateCategory(categoryNo, categoryName, imageName, params.id);
-      alert('Doctor Details Updated Successfully');
+      alert('category updated successfully');
       this._router.navigate(['learn']);
     });
   }
 
   ngOnInit(): void {
 
-    // this.route.params.subscribe(params =>{
-    //   this.categoryService.updateCategory(params[`id`]).subscribe(res =>{
-    //   this.updatedCategory =res;
-    //   });
-    // });
+    
   }
 
 

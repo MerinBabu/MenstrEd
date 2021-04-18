@@ -15,12 +15,14 @@ const userRouter = require('./routes/user');
 const categoryRouter = require('./routes/category');
 const addCategoryRouter = require('./routes/addCategory');
 const updateCategoryRouter = require('./routes/updateCategory');
+const deleteCategoryRouter = require('./routes/deleteCategory');
 
 
 app.use('/auth', userRouter);
 app.use('/category', categoryRouter);
 app.use('/addcategory', addCategoryRouter);
 app.use('/updatecategory', updateCategoryRouter);
+app.use('/deletecategory', deleteCategoryRouter);
 
 
 function verifyToken(req, res, next) {
