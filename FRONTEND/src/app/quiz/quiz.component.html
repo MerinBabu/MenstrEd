@@ -26,11 +26,13 @@
     </div>
 </nav>
 
+<div class="title">
+    <p>{{quiz[count].question}}</p>
+</div>
+
 <div class="middle-container">
 
-    <div class="title">
-        <p>{{quiz[count].question}}</p>
-    </div>
+
     <div class="an-four-image-grid-option">
         <div class="an-row-one">
 
@@ -73,11 +75,12 @@
     <div>
         <button type="button" class="btn btn-outline-danger btn-lg margin-right" *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" [routerLink]="['/update-quiz', quiz[count]._id]">Update</button>
 
-        <button type=" button " class="btn btn-outline-danger btn-lg " *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'">Delete</button>
-        <!-- (click)="deleteQuiz(quiz[count]._id) -->
+        <button type=" button " class="btn btn-outline-danger btn-lg " *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'" (click)="deleteQuiz(quiz[count]._id)">Delete</button>
+
     </div>
 </div>
-<div class="button-container">
-    <button type="button" class="btn btn-primary btn-lg" (click)=checkAnswer()>Check</button>
-    <button type="button" class="btn btn-primary btn-lg" (click)=nextQuestion()>Next</button>
+
+<div class=" button-container ">
+    <button type="button " class="btn btn-primary btn-lg " (click)=checkAnswer()>Check</button>
+    <button type="button " class="btn btn-primary btn-lg " (click)=nextQuestion()>Next</button>
 </div>

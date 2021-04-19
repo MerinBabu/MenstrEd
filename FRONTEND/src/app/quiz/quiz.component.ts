@@ -16,6 +16,15 @@ export class QuizComponent implements OnInit {
   count=0;
   constructor(public _auth:AuthService, private _router:Router,private route: ActivatedRoute,private quizService:QuizService) { }
 
+  deleteQuiz(id){
+    this.quizService.deleteQuiz(id)
+    .subscribe((data)=> {
+      console.log(data);
+      alert('Quiz deleted successfully');
+      this._router.navigate(['learn']);
+    });
+  }
+
   ngOnInit(): void {
 
     this.route.params.subscribe(params =>{

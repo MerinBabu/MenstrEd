@@ -21,6 +21,7 @@ import {FileSelectDirective} from 'ng2-file-upload';
 import { UpdateCategoryComponent } from './update-category/update-category.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizService } from './quiz.service';
+import { UpdateQuizComponent } from './update-quiz/update-quiz.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { QuizService } from './quiz.service';
     DiscussComponent,
     UpdateCategoryComponent,
     QuizComponent,
+    UpdateQuizComponent,
     
     
     

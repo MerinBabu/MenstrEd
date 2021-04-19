@@ -3,13 +3,15 @@ const cors = require("cors");
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 var bodyparser = require('body-parser');
+const port = process.env.PORT || 3000;
 var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({
     extended: false
 }));
-mongoose.connect('mongodb://localhost:27017/MenstrEd')
+// mongoose.connect('mongodb://localhost:27017/MenstrEd')
+mongoose.connect('mongodb+srv://userone:userone@ictakfiles.vfcnk.mongodb.net/MenstrEd?retryWrites=true&w=majority')
 
 const userRouter = require('./routes/user');
 const categoryRouter = require('./routes/category');
@@ -18,6 +20,8 @@ const updateCategoryRouter = require('./routes/updateCategory');
 const deleteCategoryRouter = require('./routes/deleteCategory');
 const quizRouter = require('./routes/quiz');
 const addQuizRouter = require('./routes/addQuiz');
+const updateQuizRouter = require("./routes/updateQuiz");
+const deleteQuizRouter = require('./routes/deleteQuiz');
 
 
 app.use('/auth', userRouter);
@@ -27,6 +31,8 @@ app.use('/updatecategory', updateCategoryRouter);
 app.use('/deletecategory', deleteCategoryRouter);
 app.use('/quiz', quizRouter);
 app.use('/addquiz', addQuizRouter);
+app.use('/updatequiz', updateQuizRouter);
+app.use('/deletequiz', deleteQuizRouter);
 
 
 function verifyToken(req, res, next) {
@@ -63,6 +69,6 @@ function verifyToken(req, res, next) {
 //     }
 // });
 
-app.listen(3000, function() {
-    console.log("Port listening at 3000");
+app.listen(port, function() {
+    console.log("Port listening at " + port);
 });

@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(0,0,0);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/home" *ngIf="_auth.loggedIn()">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/learn" *ngIf="_auth.loggedIn() && _auth.getToken() == 'admin'">View categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/logout" *ngIf="_auth.loggedIn()" (click)="_auth.logoutUser()">Log out</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="panel">
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3">
+                            <div class="card-header">
+                                <h1 id="sign-in">Update quiz</h1>
+                            </div>
+
+                            <div class="card-body">
+                                <form class="form-margin">
+
+
+                                    <div class="form-group">
+                                        <label>Category Name<span class="text-danger">*</span></label>
+                                        <label for="error" id="errorcatname"></label>
+                                        <input type="text" class="form-control" id="categoryName" name="categoryName" [(ngModel)]="updatedQuiz.categoryName" required>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label>Quiz No<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="categoryName" name="quizNo" [(ngModel)]="updatedQuiz.quizNo" required>
+                                        <label class="error" for="error" id="errorcatname"></label>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label>Question<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="categoryName" name="question" [(ngModel)]="updatedQuiz.question" required>
+                                        <label class="error" for="error" id="errorcatname"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Image1 link<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="imageName" name="image1" [(ngModel)]="updatedQuiz.image1" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Image2 link<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="imageName" name="image2" [(ngModel)]="updatedQuiz.image2" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Image3 link<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="imageName" name="image3" [(ngModel)]="updatedQuiz.image3" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Image4 link<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="imageName" name="image4" [(ngModel)]="updatedQuiz.image4" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Correct option (Enter the number of the option)<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="imageName" name="correctOption" [(ngModel)]="updatedQuiz.correctOption" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Message after check answer<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="imageName" name="checkMessage" [(ngModel)]="updatedQuiz.checkMessage" required>
+
+                                    </div>
+
+
+
+                                    <button class="btn btn-primary btn-block btnsubmit" [disabled]="!updatedQuiz.categoryName || !updatedQuiz.quizNo|| !updatedQuiz.question||!updatedQuiz.image1||!updatedQuiz.image2||!updatedQuiz.image3||!updatedQuiz.image4|| !updatedQuiz.correctOption|| !updatedQuiz.checkMessage"
+                                        (click)="updateQuiz(updatedQuiz.categoryName,updatedQuiz.quizNo,updatedQuiz.question,updatedQuiz.image1,updatedQuiz.image2,updatedQuiz.image3,updatedQuiz.image4,updatedQuiz.correctOption,updatedQuiz.checkMessage)">Update quiz</button>
+
+                                    <br>
+                                    <br>
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+
+                    <!-- /stories -->
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--/col-12-->
+    </div>
+</div>

@@ -36,10 +36,11 @@ h1 {
 }
 
 .title {
-    text-align: left;
+    text-align: center;
     font-size: 30px;
     color: white;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .button-container {

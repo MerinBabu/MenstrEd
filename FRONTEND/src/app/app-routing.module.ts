@@ -11,6 +11,7 @@ import { LearnComponent } from './learn/learn.component';
 import { DiscussComponent } from './discuss/discuss.component';
 import { UpdateCategoryComponent } from './update-category/update-category.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { UpdateQuizComponent } from './update-quiz/update-quiz.component';
 
 const routes: Routes = [
   {path:'',component:WelcomeComponent},
@@ -31,6 +32,10 @@ const routes: Routes = [
    component:UpdateCategoryComponent
   },
   {path:'quiz/:catname',component:QuizComponent},
+  {path:'update-quiz/:id',
+   canActivate:[AuthGuard],
+   component:UpdateQuizComponent
+  },
 ];
 
 @NgModule({
