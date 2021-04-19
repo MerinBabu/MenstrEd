@@ -1,12 +1,12 @@
 # MenstrEd
 
-To run the application:
+To run the application, run the following commands from the root folder:
 
-cd FBACKEND
+*cd FBACKEND
 
 node app.js
 
-cd FRONTEND
+*cd FRONTEND
 
 ng serve
 
