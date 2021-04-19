@@ -35,7 +35,7 @@
 
     <div class="a-category-container">
         <div *ngFor="let category of categories">
-            <div class="a-categories" onclick="openQuiz('0')">
+            <div class="a-categories" [routerLink]="['/quiz',category.categoryName]">
                 <img src="{{category.imageName}}">
                 <h3>{{category.categoryName}}</h3>
                 <div>

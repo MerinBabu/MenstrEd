@@ -16,6 +16,8 @@ const categoryRouter = require('./routes/category');
 const addCategoryRouter = require('./routes/addCategory');
 const updateCategoryRouter = require('./routes/updateCategory');
 const deleteCategoryRouter = require('./routes/deleteCategory');
+const quizRouter = require('./routes/quiz');
+const addQuizRouter = require('./routes/addQuiz');
 
 
 app.use('/auth', userRouter);
@@ -23,6 +25,8 @@ app.use('/category', categoryRouter);
 app.use('/addcategory', addCategoryRouter);
 app.use('/updatecategory', updateCategoryRouter);
 app.use('/deletecategory', deleteCategoryRouter);
+app.use('/quiz', quizRouter);
+app.use('/addquiz', addQuizRouter);
 
 
 function verifyToken(req, res, next) {

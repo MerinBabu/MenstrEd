@@ -40,7 +40,7 @@
                             <div class="card-header">
                                 <h1 id="sign-in">Add category</h1>
                             </div>
-                            <!-- <p>If you are not a member please sign up <a id="login-link-signup" href="signup.ejs">here</a>.</p> -->
+
                             <div class="card-body">
                                 <form class="form-margin" [formGroup]="addCategoryForm" (ngSubmit)="addCategory()">
 
@@ -58,9 +58,6 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="image">Category image link<span class="text-danger">*</span></label>
-                                        <!-- <input type="file" accept="image/*" class="form-control" id="imageName" name="imageName" formControlName="imageName" [(ngModel)]="newCategory.imageName" required>
-                                        ng2FileSelect [uploader]="uploader"
-                                        <img src="" id="preview"><br> -->
                                         <input type="text" class="form-control" id="imageName" name="imageName" formControlName="imageName" [(ngModel)]="newCategory.imageName" required>
 
                                     </div>
@@ -68,7 +65,7 @@
 
 
                                     <button class="btn btn-primary btn-block btnsubmit" [disabled]="addCategoryForm.invalid">Add category</button>
-                                    <!-- (click)="uploader.uploadAll()" -->
+
                                     <br>
                                     <br>
 

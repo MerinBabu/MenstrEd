@@ -10,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LearnComponent } from './learn/learn.component';
 import { DiscussComponent } from './discuss/discuss.component';
 import { UpdateCategoryComponent } from './update-category/update-category.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 const routes: Routes = [
   {path:'',component:WelcomeComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:'update-category/:id',
    canActivate:[AuthGuard],
    component:UpdateCategoryComponent
-  }
+  },
+  {path:'quiz/:catname',component:QuizComponent},
 ];
 
 @NgModule({

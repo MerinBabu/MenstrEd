@@ -19,6 +19,8 @@ import {TokenInterceptorService} from './token-interceptor.service';
 import { CategoryService } from './category.service';
 import {FileSelectDirective} from 'ng2-file-upload';
 import { UpdateCategoryComponent } from './update-category/update-category.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuizService } from './quiz.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { UpdateCategoryComponent } from './update-category/update-category.compo
     LearnComponent,
     DiscussComponent,
     UpdateCategoryComponent,
+    QuizComponent,
     
     
     
@@ -55,6 +58,7 @@ import { UpdateCategoryComponent } from './update-category/update-category.compo
               //   multi:true
               // }
               CategoryService,
+              QuizService
               
   ],
   bootstrap: [AppComponent]

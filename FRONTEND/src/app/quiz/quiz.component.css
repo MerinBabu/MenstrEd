@@ -1,0 +1,53 @@
+.navbar {
+    height: 75px;
+}
+
+a {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(171, 0, 0) !important;
+}
+
+h2 {
+    color: rgb(220, 53, 69);
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-top: 2.5%;
+}
+
+h1 {
+    color: grey;
+    position: relative;
+    margin-left: 15px;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.middle-container {
+    margin-top: 5%;
+    margin-left: 42.5%;
+    position: relative;
+}
+
+.img-option {
+    height: 150px;
+    width: 150px;
+}
+
+.title {
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.button-container {
+    margin: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.margin-right {
+    margin-right: 70px;
+}
